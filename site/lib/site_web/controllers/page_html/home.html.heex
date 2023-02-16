@@ -1,6 +1,10 @@
 <div class="flex flex-row m-4">
   <div class="12 border b-2 rounded-lg p-4 bg-gray-50">
-    <p class="mt-6 mb-4">Variants</p>
+    <p class="mt-6 mb-2">Variants</p>
+    <div class="text-xs text-slate-500 mb-4">
+      <p>Variant attribute provides four types of buttons: <code>elevated</code>, <code>filled</code>, <code>outline</code>, <code>text</code>.</p>
+      <p></p>
+    </div>
     <div class="flex items-end gap-4">
       <.button_x variant="elevated">
         Button
@@ -15,7 +19,12 @@
         Button
       </.button_x>
     </div>
-    <p class="mt-6 mb-4">Colors</p>
+    <p class="mt-6 mb-2">Colors</p>
+    <div class="text-xs text-slate-500 mb-4">
+      <p>Color attribute allows the customization of button colors.</p>
+      <p>All colors provided by Tailwind are supported.</p>
+      <p></p>
+    </div>
     <div class="flex items-end gap-4">
       <.button_x color="red">
         Button
@@ -23,14 +32,18 @@
       <.button_x color="blue">
         Button
       </.button_x>
-      <.button_x color="slate">
+      <.button_x color="green">
         Button
       </.button_x>
       <.button_x color="orange">
         Button
       </.button_x>
     </div>
-    <p class="mt-6 mb-4">Sizes</p>
+    <p class="mt-6 mb-2">Sizes</p>
+    <div class="text-xs text-slate-500 mb-4">
+      <p>Size attribute provides three different sizes: <code>sm</code> for small, <code>md</code> for medium and <code>lg</code> for large buttons.</p>
+      <p></p>
+    </div>
     <div class="flex items-end gap-4">
       <.button_x size="sm">
         Button
@@ -42,7 +55,11 @@
         Button
       </.button_x>
     </div>
-    <p class="mt-6 mb-4">Rounded Borders</p>
+    <p class="mt-6 mb-2">Rounded Borders</p>
+    <div class="text-xs text-slate-500 mb-4">
+      <p>Rounded attribute provides four different options for controlling button border radius: <code>rounded</code>, <code>md</code>, <code>lg</code>, <code>full</code></p>
+      <p></p>
+    </div>
     <div class="flex items-end gap-4">
       <.button_x rounded="rounded">
         Button
@@ -57,7 +74,11 @@
         Button
       </.button_x>
     </div>
-    <p class="mt-6 mb-4">Block Level Button</p>
+    <p class="mt-6 mb-2">Block Level Button</p>
+    <div class="text-xs text-slate-500 mb-4">
+      <p>Block Level attribute allows the button to get's all the available space in a row.</p>
+      <p></p>
+    </div>
     <div class="flex items-end gap-4">
       <.button_x block_level={true}>
         Block Level Button
