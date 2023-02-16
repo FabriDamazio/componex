@@ -6,6 +6,7 @@ defmodule ComponexMaterial.Components do#{@color}
   attr(:variant, :string, default: "filled")
   attr(:size, :string, default: "medium")
   attr(:rounded, :string, default: "rounded")
+  attr(:block_level, :boolean, default: false)
   attr(:class, :string, default: nil)
   attr(:rest, :global, include: ~w(disabled form name value))
 
@@ -23,6 +24,7 @@ defmodule ComponexMaterial.Components do#{@color}
         @rounded == "md" && "rounded-md",
         @rounded == "lg" && "rounded-lg",
         @rounded == "full" && "rounded-full",
+        @block_level == true && "w-full",
         @variant == "elevated" && "middle none center bg-#{@color}-500 font-sans text-xs font-bold uppercase text-white shadow-md shadow-#{@color}-500/20 transition-all hover:shadow-lg hover:shadow-#{@color}-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none",
         @variant == "filled" && "middle none center bg-#{@color}-500 font-sans text-xs font-bold uppercase text-white shadow-md shadow-#{@color}-500/20 transition-all hover:shadow-lg hover:shadow-#{@color}-500/40 active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none",
         @variant == "outline" && "middle none center border border-#{@color}-500 font-sans text-xs font-bold uppercase text-#{@color}-500 transition-all hover:opacity-75 focus:ring focus:ring-#{@color}-200 active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none",
