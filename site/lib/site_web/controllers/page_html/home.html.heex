@@ -63,6 +63,7 @@
     <div class="flex items-end gap-4">
       <.button_x rounded="rounded">
         Button
+        teste
       </.button_x>
       <.button_x rounded="md">
         Button
@@ -82,6 +83,37 @@
     <div class="flex items-end gap-4">
       <.button_x block_level={true}>
         Block Level Button
+      </.button_x>
+    </div>
+    <p class="mt-6 mb-2">Icon Buttons</p>
+    <div class="text-xs text-slate-500 mb-4">
+      <p>Block Level attribute allows the button to get's all the available space in a row.</p>
+      <p></p>
+    </div>
+    <div class="flex items-end gap-4">
+      <.button_x>
+        Button
+        <:icon>
+          <Heroicons.chart_bar mini />
+        </:icon>
+      </.button_x>
+      <.button_x color="green" >
+        Button
+        <:icon>
+          <Heroicons.forward mini />
+        </:icon>
+      </.button_x>
+      <.button_x color="red" >
+        Button
+        <:icon>
+          <Heroicons.x_mark mini />
+        </:icon>
+      </.button_x>
+      <.button_x color="orange" >
+        Button
+        <:icon>
+          <Heroicons.envelope mini/>
+        </:icon>
       </.button_x>
     </div>
   </div>

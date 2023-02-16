@@ -10,7 +10,8 @@ defmodule ComponexMaterial.Components do#{@color}
   attr(:class, :string, default: nil)
   attr(:rest, :global, include: ~w(disabled form name value))
 
-  slot(:inner_block, required: true)
+  slot(:icon)
+  slot(:inner_block)
 
   def button_x(assigns) do
     ~H"""
@@ -34,6 +35,9 @@ defmodule ComponexMaterial.Components do#{@color}
       ]}
       {@rest}
     >
+      <i :if={@icon != []} class="inline-block align-text-bottom h-3 w-3 stroke-current">
+        <%= render_slot(@icon) %>
+      </i>
       <%= render_slot(@inner_block) %>
     </button>
     """
