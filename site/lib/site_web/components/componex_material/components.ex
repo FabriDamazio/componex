@@ -4,7 +4,7 @@ defmodule ComponexMaterial.Components do#{@color}
   attr(:type, :string, default: nil)
   attr(:color, :string, default: "purple")
   attr(:variant, :string, default: "filled")
-  attr(:size, :string, default: "medium")
+  attr(:size, :string, default: "md")
   attr(:rounded, :string, default: "rounded")
   attr(:block_level, :boolean, default: false)
   attr(:class, :string, default: nil)
@@ -17,9 +17,10 @@ defmodule ComponexMaterial.Components do#{@color}
     <button
       type={@type}
       class={[
-        @size == "small" && "py-2 px-4 text-xs",
-        @size == "medium" && "py-3 px-6 text-xs",
-        @size == "large" && "py-3.5 px-7 text-sm",
+        "phx-submit-loading:opacity-75",
+        @size == "sm" && "py-2 px-4 text-xs",
+        @size == "md" && "py-3 px-6 text-xs",
+        @size == "lg" && "py-3.5 px-7 text-sm",
         @rounded == "rounded" && "rounded",
         @rounded == "md" && "rounded-md",
         @rounded == "lg" && "rounded-lg",
