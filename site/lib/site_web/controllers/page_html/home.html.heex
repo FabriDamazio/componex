@@ -1,5 +1,6 @@
-<div class="flex flex-row m-4">
+<div class="flex flex-row m-4 gap-4">
   <div class="12 border b-2 rounded-lg p-4 bg-gray-50">
+    <h2>Buttons</h2>
     <p class="mt-6 mb-2">Variants</p>
     <div class="text-xs text-slate-500 mb-4">
       <p>Variant attribute provides four types of buttons: <code>elevated</code>, <code>filled</code>, <code>outline</code>, <code>text</code>.</p>
@@ -115,6 +116,19 @@
           <Heroicons.envelope mini/>
         </:icon>
       </.button_x>
+    </div>
+  </div>
+  <div class="12 border b-2 rounded-lg p-4 bg-gray-50">
+    <h2>Inputs</h2>
+    <p class="mt-6 mb-2">Variants</p>
+    <div class="text-xs text-slate-500 mb-8">
+      <p>Variant attribute provides three types of inputs: <code>static</code>, <code>standard</code> and <code>outline</code>.</p>
+      <p></p>
+    </div>
+    <div class="flex w-72 flex-col gap-6 ">
+      <.input_x variant="static" label="Static" placeholder="static"/>
+      <.input_x variant="standard" label="Standard"/>
+      <.input_x variant="outline" label="Outline"/>
     </div>
   </div>
 </div>
