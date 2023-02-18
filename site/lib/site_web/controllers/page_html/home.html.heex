@@ -132,7 +132,7 @@
     </div>
     <p class="mt-6 mb-2">Focus colors</p>
     <div class="text-xs text-slate-500 mb-8">
-      <p>Color attribute allows the customization of button colors.</p>
+      <p>Color attribute allows the customization of input focus colors.</p>
       <p>All colors provided by Tailwind are supported.</p>
       <p></p>
     </div>
@@ -140,6 +140,17 @@
       <.input_x variant="static" label="Static" placeholder="static" focus_color="emerald"/>
       <.input_x variant="standard" label="Standard" focus_color="blue"/>
       <.input_x variant="outline" label="Outline" focus_color="orange"/>
+    </div>
+    <p class="mt-6 mb-2">Base colors</p>
+    <div class="text-xs text-slate-500 mb-8">
+      <p>Base Color attribute allows the customization of input base colors.</p>
+      <p>All colors provided by Tailwind are supported.</p>
+      <p></p>
+    </div>
+    <div class="flex w-72 flex-col gap-6 ">
+      <.input_x variant="static" label="Static" placeholder="static" base_color="orange"/>
+      <.input_x variant="standard" label="Standard" base_color="emerald"/>
+      <.input_x variant="outline" label="Outline" base_color="sky"/>
     </div>
   </div>
 </div>
