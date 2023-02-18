@@ -75,4 +75,28 @@ defmodule ComponexMaterial.Components do#{@color}
     </div>
     """
   end
+
+attr(:accordion_attrs, :list, default: [])
+
+# Step 1: EventListener setup with the button
+# Step 2: Function from listener toggle some className (hidden|block) on description
+# Up and down Icon
+  def accordion_x (assigns) do
+    ~H"""
+    <div id="accordion-state"  phx-hook="AccordionState">
+      <%= for {attr,index} <- Enum.with_index(@accordion_attrs) do %>
+
+        <button id={"title-#{index}"} >
+          <span><%= attr.title %></span>
+          <%!-- some icon --%>
+        </button>
+        <div id={"description-#{index}"} >
+        <%!-- false => hidden | block => block --%>
+          <p><%= attr.description %></p>
+        </div>
+
+      <% end %>
+    </div>
+    """
+  end
 end

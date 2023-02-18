@@ -23,7 +23,33 @@ import {LiveSocket} from "phoenix_live_view"
 import topbar from "../vendor/topbar"
 
 let csrfToken = document.querySelector("meta[name='csrf-token']").getAttribute("content")
-let liveSocket = new LiveSocket("/live", Socket, {params: {_csrf_token: csrfToken}})
+
+let Hooks = {}
+Hooks.AccordionState = {
+  mounted() {
+      console.log(this.el)
+       let currentThis= this
+
+       let parentEl = this.el
+    // This will select every button in the accordion, not just the toggle buttons that we want.
+    this.el.querySelectorAll("button").forEach((value, index) => {
+      value.addEventListener('click', () => {
+        console.log("I'm clicked", value)
+        console.log("what is this", currentThis.el)
+
+        console.log( parentEl.querySelector("#description-" + index)) //Emppty
+        let descr = parentEl.querySelector("#description-" + index)
+        console.log(descr)
+        descr.classList.toggle("hidden")
+      })
+
+    })
+
+
+  }
+}
+
+let liveSocket = new LiveSocket("/live", Socket, {hooks: Hooks, params: {_csrf_token: csrfToken}})
 
 // Show progress bar on live navigation and form submits
 topbar.config({barColors: {0: "#29d"}, shadowColor: "rgba(0, 0, 0, .3)"})
