@@ -1,4 +1,4 @@
-defmodule ComponexMaterial.InputColors do
+defmodule ComponexMaterial.InputClasses do
   @border [
     slate: "focus:border-slate-500 , after:border-slate-500 , peer-focus:after:border-slate-500 , peer-focus:before:border-slate-500" ,
     gray: "focus:border-gray-500 , after:border-gray-500 , peer-focus:after:border-gray-500 , peer-focus:before:border-gray-500" ,

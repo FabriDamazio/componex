@@ -1,4 +1,4 @@
-defmodule ComponexMaterial.ButtonColors do
+defmodule ComponexMaterial.ButtonClasses do
   @bg [
     slate: "bg-slate-500 , bg-slate-500/10 , bg-slate-500/30 hover , hover:bg-slate-500/10 , active:bg-slate-500/30",
     gray: "bg-gray-500 , bg-gray-500/10 , bg-gray-500/30, hover:bg-gray-500/10 , active:bg-gray-500/30 ",
