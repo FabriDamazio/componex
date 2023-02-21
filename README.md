@@ -27,7 +27,7 @@ In the same folder there are files with the `_classes` suffix, which is where th
 
 When a component is created, we create a usage example to demonstrate how the component should be used.
 
-## Como contribuir?
+## Contributing
 
 We appreciate your contribution! Check open issues and feel free to work, send questions or suggestions to improve the library.
 Check our [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md) and [CONTRIBUTING.md](CONTRIBUTING.md) guides for more information.
