@@ -1,4 +1,5 @@
-defmodule ComponexMaterial.Components do#{@color}
+# {@color}
+defmodule ComponexMaterial.Components do
   use Phoenix.Component
 
   attr(:type, :string, default: nil)
@@ -72,6 +73,26 @@ defmodule ComponexMaterial.Components do#{@color}
       ]}>
         <%= @label %>
       </label>
+    </div>
+    """
+  end
+
+  attr(:value, :integer, required: true)
+  attr(:label, :string, default: nil)
+  attr(:color, :string, default: "purple")
+
+  def progress_x(assigns) do
+    ~H"""
+    <div class={[
+      "relative w-full min-w-[200px]"
+      ]}>
+      <div class={"flex-start flex #{@label && 'h-4' || 'h-1.5'} w-full overflow-hidden rounded-sm bg-blue-gray-50 font-sans text-xs font-medium"}>
+    <div
+    class={"flex h-full items-baseline justify-center overflow-hidden break-all bg-#{@color}-500 text-white"}
+    style={"width: #{@value}%;"}
+    >
+    <%= @label && "#{@value}% #{@label}"  %></div>
+    </div>
     </div>
     """
   end
