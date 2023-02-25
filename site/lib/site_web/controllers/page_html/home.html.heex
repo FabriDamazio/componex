@@ -153,4 +153,38 @@
       <.input_x variant="outline" label="Outline" base_color="sky"/>
     </div>
   </div>
+  <div class="12 border b-2 rounded-lg p-4 bg-gray-50">
+    <h2>Progress Bar</h2>
+    <p class="mt-6 mb-2">Props</p>
+    <div class="text-xs text-slate-500 mb-8">
+      <p>The <code>progress</code> component comes with 3 main props that you can set,
+      <code>value</code>, <code>color</code>, <code>label</code> props </p>
+    </div>
+    <div class="flex w-full flex-col gap-6 ">
+      <.progress_x value="25"/>
+      <.progress_x value="50"/>
+    </div>
+    <p class="mt-6 mb-2">Colors</p>
+    <div class="text-xs text-slate-500 mb-8">
+      <p>Color attribute allows the customization of progress colors.</p>
+      <p>All colors provided by Tailwind are supported.</p>
+    </div>
+    <div class="flex w-full flex-col gap-6 ">
+      <.progress_x value={50} color="blue" />
+      <.progress_x value={50} color="red" />
+      <.progress_x value={50} color="green" />
+      <.progress_x value={50} color="amber" />
+      <.progress_x value={50} color="teal" />
+      <.progress_x value={50} color="indigo" />
+      <.progress_x value={50} color="purple" />
+      <.progress_x value={50} color="pink" />
+    </div>
+    <p class="mt-6 mb-2">Progress Bar with Label</p>
+    <div class="text-xs text-slate-500 mb-8">
+      <p>You can add custom label inside the progress bar using the <code>label</code> prop.</p>
+    </div>
+    <div class="flex w-full flex-col gap-6 ">
+      <.progress_x value={50}  label="Completed" />
+    </div>
+  </div>
 </div>
